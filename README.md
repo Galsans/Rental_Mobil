@@ -1,6 +1,8 @@
-# 🚀 Laravel Project Installation Guide
+# 🚗 Project Aplikasi Booking Kendaraan – Installation Guide
 
 Panduan ini akan membantu kamu men-setup dan menjalankan proyek Laravel secara lokal.
+
+---
 
 ## 📋 Prasyarat
 
@@ -8,6 +10,7 @@ Sebelum memulai, pastikan kamu sudah menginstall:
 
 -   PHP >= 8.1
 -   Composer
+-   Node.js & NPM
 -   MySQL / MariaDB
 -   Git
 -   Laravel CLI (opsional)
@@ -18,81 +21,88 @@ Sebelum memulai, pastikan kamu sudah menginstall:
 
 ## 📦 1. Clone Repository
 
-```
-https://github.com/Galsans/Reservasi_Hotel
-cd Reservasi_Hotel
+```bash
+git clone https://github.com/Galsans/Rental_Mobil
+cd Rental_Mobil
 ```
 
 ## ⚙️ 2. Install Dependency PHP
 
-```
 composer install
 
 ```
 
-## 🔑 3. Salin File .env
+## 🎨 3. Install Dependency Frontend (NPM)
 
 ```
+
+npm install
+npm run dev
+
+```
+
+## 🔑 4. Salin File .env
+
+```
+
 cp .env.example .env
+
 # atau (Windows)
+
 copy .env.example .env
 
 ```
 
-## 🔐 4. Generate App Key & Storage
+## 🔐 5. Generate App Key & Storage
 
 ```
+
 php artisan key:generate
 php artisan Storage:link
 
 ```
 
-## 🗄️ 5. Jalankan Migrasi dan Seeder
+## 🗄️ 6. Jalankan Migrasi dan Seeder
 
 ```
+
 php artisan migrate --seed
 
 ```
 
-## 🏃 6. Jalankan Server Lokal
+## 🏃 7. Jalankan Server Lokal
 
 ```
+
 php artisan serve
 
 ```
 
 🛠️ Fitur Aplikasi
 
-👤 Admin Panel
+1. 👤 Admin Panel
+   Admin memiliki akses penuh untuk mengelola data dan melakukan konfirmasi booking.
 
-1. CRUD Room (Kamar Hotel)
-   Tambah, ubah, dan hapus data kamar yang tersedia untuk reservasi.
+✅ CRUD Kategori Kendaraan
 
-2. CRUD Reservation
-   Kelola seluruh data reservasi dari semua user.
+✅ CRUD Data Kendaraan
 
-3. Laporan Pendapatan
-   Menampilkan total pendapatan yang didapat dari reservasi.
+✅ CRUD Data Pegawai
 
-4. Kamar Populer
-   Statistik kamar yang paling banyak dipesan oleh pengguna.
+✅ Konfirmasi Booking Tiket
 
-5. Autentikasi via Google
-   Login menggunakan akun Google untuk admin dengan keamanan berbasis token.
+2. 🧑‍💼 Pegawai
+   Pegawai memiliki akses terbatas untuk membantu proses administrasi dan komunikasi.
 
-🙋 User Panel
+✅ Konfirmasi Booking Tiket
 
-1. Reservasi Hotel Pribadi
-   User dapat melakukan pemesanan kamar hotel.
+✅ Administrasi Chat / Komentar dari User
 
-2. Hapus Reservasi
-   Pengguna dapat membatalkan reservasi yang sudah dilakukan.
+3. 🙋 User Panel
 
-3. Edit Reservasi
-   Pengguna dapat mengedit reservasi yang sudah dilakukan.
+User dapat melakukan pemesanan kendaraan dan membatalkan jika diperlukan.
 
-4. Generate PDF Konfirmasi
-   Setelah melakukan reservasi, user dapat mendownload file PDF sebagai bukti dan mengirimkannya ke pihak admin hotel.
+✅ Booking Mobil / Kendaraan
 
-5. Autentikasi via Google
-   Login menggunakan akun Google untuk user dengan keamanan berbasis token.
+✅ Membatalkan Bookingan
+```
