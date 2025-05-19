@@ -28,6 +28,7 @@ cd Rental_Mobil
 
 ## ⚙️ 2. Install Dependency PHP
 
+```
 composer install
 
 ```
@@ -105,4 +106,7 @@ User dapat melakukan pemesanan kendaraan dan membatalkan jika diperlukan.
 ✅ Booking Mobil / Kendaraan
 
 ✅ Membatalkan Bookingan
+
+```
+
 ```
